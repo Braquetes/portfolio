@@ -4,8 +4,9 @@
             <p class="">Rodolfo Braquetes/ <span>Software Development</span></p>
         </header>
         <main class="px-3 text-welcome">
-            <h1 class="display-1">No matter where you are,<br><span> if not until where you wanna get</span></h1>
+            <h1 class="display-1" [ngClass]="{'out': blurActive, 'in': !blurActive}" [innerHTML]="displayText"></h1>
         </main>
+
         <footer class="mt-auto">
             <a (click)="redirectBio()" class="btn_gral btn_primary"><i class="fa fa-arrow-right"></i> Empezar</a>
             <a (click)="redirectGithub()" target="_blank" class="btn_gral btn_secondary"><i
